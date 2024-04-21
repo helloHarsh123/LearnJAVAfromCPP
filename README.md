@@ -44,6 +44,7 @@ parseInt, parseDouble, parseBoolean
         1. arr\[0\] = new int\[3\]; //each row can have different num of els
     3. int\[\]\[\] arr= { {1, 2, 3, 4}, {5, 6, 7} };
 - **Classes and Other Objects**
+```
     1. Class Point{
 
 int x,
@@ -60,7 +61,7 @@ Point tl;
 Point br;
 
 }
-
+```
 - 1. Rectangle r = new Rectangle; r.tl = new Point; r.br = new Point;
   2. All class object names are references(equivalent to pointers)
 - **ArrayList(equivalent to vectors)**
@@ -183,60 +184,64 @@ return this.rno - o.rno;
 - **Custom Compare in Java (Override Comparable)**
     1. Comparison is not bool but **integer**.
     2. **PriorityQueue**&lt; Pair<Integer, Integer&gt; > = new PriorityQueue<>(new CustomCompare()); // Pair is a Comparable but we are overriding the default comparison
-    3. public class **CustomCompare** implements **Comparator&lt; Pair<Integer,Integer&gt; >** {
 
-@Override
-
-public int **compare**( Pair&lt;Integer, Integer&gt; p1, Pair&lt;Integer, Integer&gt; p2) {
-
-return (p1.getKey() + p1.getValue()) - (p2.getKey() + p2.getValue());
-
-}
-
-}
-
+    ```
+    public class **CustomCompare** implements **Comparator&lt; Pair<Integer,Integer&gt; >** {
+    
+        @Override
+        
+        public int **compare**( Pair&lt;Integer, Integer&gt; p1, Pair&lt;Integer, Integer&gt; p2) {
+        
+        return (p1.getKey() + p1.getValue()) - (p2.getKey() + p2.getValue());
+        
+        }
+    
+    }
+    ```
 - 1. Arrays.sort(arr, new **CustomCompare**);
 - LinkedLists: Singly, Doubly, Circular
     1. While doing all the operations: addNode, deleteNode, showAll
 
 keep in mind that as soon as an object is out of reference in Java we can consider it as good as deleted.
 
-- 1. public class Node { // Singly node
+```
+public class Node { // Singly node
 
-int value;
-
-Node next;
-
-public Node(int value) {
-
-this.value = value;
-
-next = null;
-
-}
-
-}
-
-- 1. public class Node { // doubly or circular
-
-int value;
-
-Node next;
-
-Node previous;
-
-public Node(int value) {
-
-this.value = value;
-
-next = null;
-
-previous = null;
+    int value;
+    
+    Node next;
+    
+    public Node(int value) {
+    
+    this.value = value;
+    
+    next = null;
+    
+    }
 
 }
+```
+```
+public class Node { // doubly or circular
+
+    int value;
+    
+    Node next;
+    
+    Node previous;
+    
+    public Node(int value) {
+    
+        this.value = value;
+        
+        next = null;
+        
+        previous = null;
+    
+    }
 
 }
-
+```
 - 1. Using Collections LinkedList // By default singly //time complexities match normal LinkedList which maintains head and tail
         1. LinkedList&lt;String&gt; ll = new LinkedList<>();
         2. ll.add(“Hello”); ll.add(“World”); ll.add(“Harsh”); // add at end
