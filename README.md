@@ -45,20 +45,20 @@ parseInt, parseDouble, parseBoolean
     3. int\[\]\[\] arr= { {1, 2, 3, 4}, {5, 6, 7} };
 - **Classes and Other Objects**
 ```
-    1. Class Point{
+Class Point{
 
-int x,
-
-int y
+    int x,
+    
+    int y
 
 };
 
-- 1. Point p = new Point();, p.x, p.y
-  2. Class Rectangle{
+Point p = new Point();, //p.x, p.y
+Class Rectangle{
 
-Point tl;
-
-Point br;
+    Point tl;
+    
+    Point br;
 
 }
 ```
